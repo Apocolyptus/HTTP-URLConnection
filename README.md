@@ -16,5 +16,3 @@
   • [Proxy] (proxy.java)
 
 4) [Web Sockets] (4_Web Sockets.txt)
-
-  • [Web Sockets] (websockets.java)
