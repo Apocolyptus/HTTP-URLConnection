@@ -1,3 +1,4 @@
 #Proxy#
 
-You can set the proxy via the Settings class. For example you could add the following line to your onCreate method in your activity.
+You can set the proxy via the Settings class. For example you could add the following line to your onCreate method in your
+activity.
