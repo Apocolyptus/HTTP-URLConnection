@@ -1,1 +1,16 @@
 #HTTP Access on Android#
+
+Most network-connected Android apps will use HTTP to send and receive data. Android includes two HTTP clients: HttpURLConnection
+and Apache HTTP Client. Both support HTTPS, streaming uploads and downloads, configurable timeouts, IPv6 and connection pooling.
+
+DefaultHttpClient and its sibling AndroidHttpClient are extensible HTTP clients suitable for web browsers. They have large and
+flexible APIs. Their implementation is stable and they have few bugs.
+
+But the large size of this API makes it difficult for us to improve it without breaking compatibility. The Android team is not
+actively working on Apache HTTP Client.
+
+HttpURLConnection is a general-purpose, lightweight HTTP client suitable for most applications. This class has humble 
+beginnings, but its focused API has made it easy for us to improve steadily.
+
+Since HTTP’s Content-Length header returns the compressed size, it is an error to use getContentLength() to size buffers for the
+uncompressed data. Instead, read bytes from the response until InputStream.read() returns -1.
